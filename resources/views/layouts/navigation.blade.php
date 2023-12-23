@@ -47,7 +47,21 @@
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                        <a href="{{route('admin.declaration.index')}}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>déclaration</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('admin.categories.index') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Catégorie</p>
+                        </a>
+                    </li>
+
+            <li class="nav-item">
+                <a href="{{ route('admin.blogs.index')}}" class="nav-link">
                     <i class="nav-icon fas fa-circle nav-icon"></i>
                     <p>
                         Blog
@@ -55,18 +69,15 @@
                     </p>
                 </a>
                 <ul class="nav nav-treeview" style="display: none;">
-                    <li class="nav-item">
-                        <a href="{{ route('admin.categories.index') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Catégorie</p>
-                        </a>
-                    </li>
+                    
+                   
                     <li class="nav-item">
                         <a href="{{ route('admin.blogs.index') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Ajouter un article de blog</p>
                         </a>
                     </li>
+                   
                 </ul>
             </li>
         </ul>

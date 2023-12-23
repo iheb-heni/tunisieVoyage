@@ -96,39 +96,21 @@
       <div class="card">
     <div class="card-body">
         <h3 class="card-title">Formulaire de Contact</h3>
-        
-            @csrf
-
-            <div class="form-group">
-                <label for="nom">Nom</label>
-                <input type="text" class="form-control" id="nom" name="nom" required>
+        <div class="package-travel">
+            <div class="card">
+                <form action="{{ route('declaration.store') }}" method="post">
+                    @csrf 
+                    <input type="text" name="name" placeholder="Votre Nom" required/>
+                    <input type="text" name="last_name" placeholder="Votre prénom" required />
+                    <input type="email" name="email" placeholder="Votre Email" required />
+                    <input type="text" name="message" placeholder="Votre message" required/>
+                   
+                    <button type="submit" class="button button-booking">Envoyer</button>
+                </form>
             </div>
-
-            <div class="form-group">
-                <label for="prenom">Prénom</label>
-                <input type="text" class="form-control" id="prenom" name="prenom" required>
-            </div>
-            <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Message :</label>
-                <textarea class="form-control form-control-lg" id="message" name="message" rows="16" required></textarea>
-            </div>
-
-            <!-- Ajoutez le champ Captcha ici (si vous l'avez) -->
-
-            
-            <button type="submit" class="btn btn-primary">Envoyer</button>
-        </form>
+        </div>
     </div>
 </div>
 
-
-      <!-- Fin du formulaire de contact -->
-    </div>
-  </div>
 </section>
 @endsection

@@ -43,11 +43,10 @@ class BlogController extends Controller
             );
             $slug = Str::slug($request->title, '-');
 
-            Blog::create($request->except('image') + ['slug' => $slug, 'image' => $image]);
         }
 
         return redirect()->route('admin.blogs.index')->with([
-            'message' => 'Success Created !',
+            'message' => 'Succée d enregistrement !',
             'alert-type' => 'success'
         ]);
     }
@@ -89,7 +88,7 @@ class BlogController extends Controller
         }
 
         return redirect()->route('admin.blogs.index')->with([
-            'message' => 'Success Updated !',
+            'message' => 'Succés de modification !',
             'alert-type' => 'info'
         ]);
     }
@@ -103,7 +102,7 @@ class BlogController extends Controller
         $blog->delete();
 
         return redirect()->back()->with([
-            'message' => 'Success Deleted !',
+            'message' => 'Succée de suppression !',
             'alert-type' => 'danger'
         ]);
     }
